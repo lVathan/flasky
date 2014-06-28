@@ -17,7 +17,7 @@ def index():
             session['known'] = False
             if current_app.config['FLASKY_ADMIN']:
                 send_email('nathan.cordrey@gmail.com', 'New User', 'mail/new_user', user=user)
-                flash('email sent!' + current_app.config['MAIL_USERNAME'])
+                flash('email sent!')
         else:
             session['known'] = True
         session['name'] = form.name.data
